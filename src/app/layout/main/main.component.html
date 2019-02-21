@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-xs-12 col-sm-4 col-md-2 d-none d-md-block bg-light sidebar px-0" [@navigationHidden]="hideNav | async">
+      <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">&nbsp;</a>
+      </nav>
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main role="main" class=" col-sm-8 col-md-9 ml-sm-auto col-lg-10 px-0" [@navigationMargin]="hideNav | async">
+      <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+        <button class="btn btn-default" type="button" (click)="toggleNav()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+        <div class="mr-auto"></div>
+      </nav>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
