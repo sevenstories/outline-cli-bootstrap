@@ -11,8 +11,8 @@ import {map} from 'rxjs/operators';
     trigger('navigationHidden',[
       state('closed',style({'max-width':'0px'})),
       state('open',style({})),
-      transition('open => closed',animate('200ms ease-in')),
-      transition('closed => open',animate('200ms ease-in')),
+      transition('open => closed',animate('400ms ease-in')),
+      transition('closed => open',animate('400ms ease-in')),
     ]),
     // trigger('navigationMargin',[
     //   state('closed',style({flex:'0 0 100%', 'max-width':'100%'})),
@@ -33,8 +33,6 @@ export class MainComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleNav(){
-    this.navService.toggle();
-  }
+
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { NavigationService } from './navigation.service';
 
 @Component({
   selector: 'layout-navigation',
@@ -8,9 +9,12 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navService : NavigationService) { }
 
   ngOnInit() {
   }
 
+  toggleNav(){
+    this.navService.toggle();
+  }
 }
