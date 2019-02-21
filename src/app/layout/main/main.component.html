@@ -1,24 +1,23 @@
 <div class="container-fluid">
   <div class="row">
     <nav class="col bg-light sidebar px-0" [@navigationHidden]="hideNav | async">
-      <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">&nbsp;</a>
-      </nav>
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-          </li>
-        </ul>
-      </div>
+      <router-outlet name="navigation"></router-outlet>
     </nav>
-    <main role="main" class="col px-0" >
-      <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
-        <button class="btn btn-default" type="button" (click)="toggleNav()">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand col-xs-3 col-sm-3 col-md-2" href="#">Company name</a>
-        <div class="mr-auto"></div>
-      </nav>
-      <router-outlet></router-outlet>
+    <main role="main" class="col px-0">
+
+      <router-outlet name="heading"></router-outlet>
+      
+      <div class="row m-3">
+        <div class="col">
+            <router-outlet name="breadcrumbs"></router-outlet>
+        </div>
+      </div>
+
+      <div class="row m-3">
+        <div class="col">
+          <router-outlet></router-outlet>
+
+        </div>
+      </div>
     </main>
   </div>
