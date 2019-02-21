@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <nav class="col-md-2 d-none d-md-block bg-light sidebar px-0" [@navigationHidden]="hideNav | async">
+    <nav class="col-10 col-sm-4 col-md-3 col-lg-2  bg-light sidebar px-0" [@navigationHidden]="hideNav | async">
       <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">&nbsp;</a>
       </nav>
@@ -11,12 +11,12 @@
         </ul>
       </div>
     </nav>
-    <main role="main" class="col-md-10 ml-sm-auto px-0" [@navigationMargin]="hideNav | async">
+    <main role="main" class="col-2 col-sm-8 col-md-9 col-lg-10  px-0" [@navigationMargin]="hideNav | async">
       <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
         <button class="btn btn-default" type="button" (click)="toggleNav()">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+        <a class="navbar-brand col-xs-3 col-sm-3 col-md-2" href="#">Company name</a>
         <div class="mr-auto"></div>
       </nav>
       <router-outlet></router-outlet>
