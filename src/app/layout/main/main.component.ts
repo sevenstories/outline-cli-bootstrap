@@ -9,17 +9,17 @@ import {map} from 'rxjs/operators';
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations:[
     trigger('navigationHidden',[
-      state('closed',style({flex:'0 0 0%', 'max-width':'0%'})),
+      state('closed',style({'max-width':'0px'})),
       state('open',style({})),
       transition('open => closed',animate('200ms ease-in')),
       transition('closed => open',animate('200ms ease-in')),
     ]),
-    trigger('navigationMargin',[
-      state('closed',style({flex:'0 0 100%', 'max-width':'100%'})),
-      state('open',style({})),
-      transition('open => closed',animate('200ms ease-in')),
-      transition('closed => open',animate('200ms ease-in')),
-    ])
+    // trigger('navigationMargin',[
+    //   state('closed',style({flex:'0 0 100%', 'max-width':'100%'})),
+    //   state('open',style({})),
+    //   transition('open => closed',animate('300ms ease-in')),
+    //   transition('closed => open',animate('300ms ease-in')),
+    // ])
   ]
 })
 export class MainComponent implements OnInit {
