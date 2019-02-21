@@ -1,3 +1,17 @@
-.sidebar{
-    max-width: 250px;
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/_mixins';
+
+@include media-breakpoint-up(xs) {
+    .sidebar{
+        max-width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+}
+@include media-breakpoint-up(sm) {
+    .sidebar{
+        max-width: 250px;
+        position: relative;
+    }
 }
